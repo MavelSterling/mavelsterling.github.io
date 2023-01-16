@@ -1,25 +1,158 @@
-/* CSS para dar estilo a la página */
+/* Estilos generales */
 body {
-    background-color: #f2f2f2;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Utilizar una tipografía legible */
+    margin: 0;
+    padding: 0;
   }
-  h1 {
+  
+  /* Encabezado */
+  header {
+    background-color: rgb(224, 232, 239); /* Utilizar una paleta de colores coherente */
+    color: rgb(61, 80, 114);
     text-align: center;
-  }
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .section {
     padding: 20px;
   }
-  .section-title {
+  header h1 {
+    margin: 0;
+    font-size: 36px; /* Aumentar el tamaño de la fuente para el nombre */
+  }
+/* Barra de navegación*/
+  nav {
+    background-color: #2887b7; /* Utilizar una paleta de colores coherente */
+    text-align: center; /* Centrar el texto */
+    padding: 10px 0; /* Aumentar el espaciado superior e inferior */
+    position: static; /* Fijar la navegación en la parte superior de la página */
+    width: 100%; /* Asegurar que la navegación ocupe todo el ancho disponible */
+    z-index: 1; /* Asegurar que la navegación esté por encima de otros elementos */
+  }
+  nav ul {
+    list-style: none; /* Eliminar los puntos de las listas */
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline-block; /* Mostrar los elementos de la lista en una línea */
+    margin-right: 10px; /* Aumentar el espaciado entre los elementos de la lista */
+  }
+  nav ul li a {
+    color: #fff; /* Utilizar un color claro para el texto */
+    text-decoration: none; /* Eliminar la subraya del texto */
+    padding: 10px 15px; /* Aumentar el espaciado entre el texto y el borde */
+  }
+  nav ul li a:hover {
+    background-color: #555; /* Cambiar el color de fondo cuando se posiciona sobre el enlace */
+  }
+  
+  
+  /* Sección Acerca de mí */
+  section#about {
+    /*background-color: #d9edf7;*/ /* Utilizar un color de fondo diferente para destacar esta sección */
+    padding: 40px;
+  }
+  section#about h2 {
+    margin: 0;
+    font-size: 24px; /* Aumentar el tamaño de la fuente para el título */
+  }
+  section#about p {
+    margin-bottom: 20px;
+    line-height: 1.5; /* Aumentar el espaciado entre líneas para mejorar la legibilidad */
+  }
+  
+  /* Sección Habilidades */
+  section#skills {
+    /*background-color: #d9edf7;*/ /* Utilizar un tono azul claro para destacar esta sección */
+    padding: 40px;
+  }
+  section#skills h2 {
+    margin: 0;
     font-size: 24px;
+  }
+  section#skills ul {
+    list-style: none; /* Eliminar los puntos de las listas */
+  }
+  section#skills ul li {
     margin-bottom: 10px;
   }
-  .social-links a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 10px;
+  
+  /* Sección Portafolio */
+  section#portfolio {
+    padding: 40px;
   }
+  section#portfolio h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  section#portfolio .portfolio-item {
+    margin-bottom: 20px; /* Aumentar el espaciado entre los elementos del portafolio */
+  }
+  /* Sección Portafolio */
+  section#portfolio .portfolio-item img {
+    max-width: 100%; /* Asegurar que las imágenes se adapten al tamaño de la pantalla */
+  }
+  section#portfolio .portfolio-item p {
+    margin-top: 10px; /* Aumentar el espaciado entre la imagen y la descripción */
+    font-size: 14px; /* Reducir el tamaño de la fuente para la descripción */
+  }
+  
+  /* Sección Contacto */
+  section#contact {
+    background-color: #f2f2f2; /* Utilizar un color de fondo diferente para destacar esta sección */
+    padding: 40px;
+  }
+  section#contact h2 {
+    margin: 0;
+    font-size: 24px;
+  }
+  section#contact form label {
+    display: block; /* Mostrar los labels en una línea diferente al input */
+    margin-bottom: 10px;
+  }
+  section#contact form input[type="text"],
+  section#contact form input[type="email"],
+  section#contact form textarea {
+    width: 100%; /* Asegurar que los inputs ocupen todo el ancho disponible */
+    padding: 12px;
+    border: 1px solid #ccc; /* Añadir un borde a los inputs */
+    margin-bottom: 20px;
+  }
+  section#contact form input[type="submit"] {
+    background-color: #333; /* Utilizar el mismo color de fondo del encabezado para el botón de enviar */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer; /* Cambiar el cursor a mano cuando se posiciona sobre el botón */
+  }
+  section#contact form input[type="submit"]:hover {
+    background-color: #555; /* Cambiar el color de fondo cuando se posiciona sobre el botón */
+  }
+  
+ /* Pie de página */
+footer {
+    background-color: rgb(224, 232, 239); /* Utilizar un color gris claro para el pie de página */
+    color: #333; /* Utilizar un color oscuro para el texto */
+    text-align: center;
+    padding: 20px;
+  }
+  footer p {
+    margin: 0;
+  }
+  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
+    /* Ajustar la navegación para dispositivos móviles */
+    nav ul {
+      display: none; /* Ocultar la navegación */
+    }
+    nav ul.responsive {
+      display: block; /* Mostrar la navegación en dispositivos móviles */
+    }
+    /* Ajustar el tamaño de la fuente para dispositivos móviles */
+    header h1 {
+      font-size: 28px;
+    }
+    section h2 {
+      font-size: 20px;
+    }
+  }
+  
   
